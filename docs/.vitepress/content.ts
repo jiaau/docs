@@ -51,5 +51,5 @@ export const content: contentObject = {
       },
     ],
   },
-  ['Deep Learning']: {},
+  ['LHY']: {},
 }

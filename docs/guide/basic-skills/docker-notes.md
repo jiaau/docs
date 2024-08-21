@@ -60,3 +60,12 @@ Create a new image from a container's changes.
 
 [docker container commit](https://docs.docker.com/reference/cli/docker/container/commit/)
 
+## Dockerfile
+
+### ARG
+
+set DEBIAN=noninteractive is very useful, and don't work in final image.
+
+### ENV
+
+without env, I should source .zshrc/.bashrc/.profile etc in every layer including container start
