@@ -1,8 +1,27 @@
 # Vim and Neovim
 
-## Install
+Did you know that hjkl is not vim?
+
+## Installation
 
 [环境配置指南/编辑器 – Neovim 安装配置教程（基于 NvChad）](https://zhuanlan.zhihu.com/p/712125953)
+
+issues:
+
+[Background color different when running neovim inside tmux](https://github.com/wez/wezterm/issues/3649)
+
+solved by:
+
+```.tmux.conf
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+
+set -s set-clipboard on
+```
+
+```.zshrc
+# alias
+alias tmux="tmux -u"
+```
 
 ## Plugins
 
