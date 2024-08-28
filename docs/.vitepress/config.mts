@@ -94,8 +94,7 @@ function sidebarItemGenerator(acc: DefaultTheme.Sidebar, navText: string) {
         const baseDir = path.join(parentDir, baseDirName)
 
         return content[navText].sidebar?.map(subSidebar => {
-          const subDirName =
-            subSidebar.text?.toLowerCase().split(' ').join('-') || 'noSuchDir'
+          const subDirName = subSidebar.link || subSidebar.text?.toLowerCase().split(' ').join('-') || 'noSuchDir'
           try {
             const subDir = path.join(baseDir, subDirName)
 
