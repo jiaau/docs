@@ -32,7 +32,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/whicha/docs/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面',
+      text: 'Edit this page on GitHub',
     },
 
     footer: {
@@ -41,12 +41,12 @@ export default defineConfig({
     },
 
     docFooter: {
-      prev: '上一页',
-      next: '下一页',
+      prev: false,
+      next: false,
     },
 
     outline: {
-      label: 'Outline',
+      label: 'In this article',
       level: 'deep',
     },
 
