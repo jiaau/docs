@@ -1,1 +1,1 @@
-# Config index
+# Guide index

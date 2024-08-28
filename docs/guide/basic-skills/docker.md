@@ -1,4 +1,4 @@
-# Docker Notes
+# Docker
 
 ## Install Docker Desktop
 
@@ -46,11 +46,11 @@ sudo apt-get install ./docker-desktop-<arch>.deb
 
 代理软件打开全局模式
 
-![clash-proxy.png](./docker-notes/clash-proxy.png)
+![clash-proxy.png](./docker/clash-proxy.png)
 
 在 Docker Desktop 中设置代理软件端口
 
-![docker-proxy.png](./docker-notes/docker-proxy.png)
+![docker-proxy.png](./docker/docker-proxy.png)
 
 ## Docker Container
 

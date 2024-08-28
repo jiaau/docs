@@ -1,6 +1,6 @@
 # Quickstart with Ubuntu 22.04 Desktop
 
-## Useful links
+## Resources
 
 [Windows11 + Linux (Ubuntu22.04) 双系统最简安装详细避坑版_win11安装linux双系统-CSDN博客](https://blog.csdn.net/2401_84064328/article/details/137232169)
 
@@ -121,3 +121,29 @@ GNOME 插件可在[这里](https://extensions.gnome.org/)找到。实际上你�
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)：在顶栏显示一个咖啡杯图标，点击即可阻止屏幕自动关闭。如果你以往需要频繁在设置中切换屏幕自动关闭的状态，这个插件可能会很有用。
 - [Places Status Indicator](https://extensions.gnome.org/extension/8/places-status-indicator)：在顶栏显示文件菜单（显示为“位置”），使得你可以在顶栏中直接打开文件。
 - [No activities button](https://extensions.gnome.org/extension/3184/no-activities-button/)：禁用左上角的“活动”按钮。
+
+
+## Python installation
+
+各个配置文件对应的 shell。
+
+```txt
+WARNING: seems you still have not added 'pyenv' to the load path.
+
+# Load pyenv automatically by appending
+# the following to
+# ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
+# and ~/.bashrc (for interactive shells) :
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Restart your shell for the changes to take effect.
+
+# Load pyenv-virtualenv automatically by adding
+# the following to ~/.bashrc:
+
+eval "$(pyenv virtualenv-init -)"
+```
+

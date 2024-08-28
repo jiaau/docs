@@ -1,4 +1,4 @@
-# Git Notes
+# Git
 
 > [!TIP]
 > 如何避免每次输入密码
