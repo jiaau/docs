@@ -1,6 +1,6 @@
 # Quickstart with Windows 10
 
-## Install Win10
+## Installation
 
 [通过微软MediaCreationTool制作Win10系统安装U盘，安装纯净版Win10的通用教程-联想知识库 (lenovo.com.cn)](https://iknow.lenovo.com.cn/detail/177365.html) 
 
@@ -37,7 +37,19 @@ DWORD 类型，值1
 [Releases · 2dust/v2rayN (github.com)](https://github.com/2dust/v2rayN/releases?ref=vps-rank)
 
 
-## PowerShell Scripts
+## PowerShell
+
+### Installation
+
+[Windows 终端安装 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/install) 
+
+[使用 winget 工具安装和管理应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/) 
+
+### Resources
+
+[环境配置指南前置 – Windows 终端 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678607774)
+
+PowerShell 脚本备份
 
 ```shell
 function Enable-Proxy {
@@ -174,43 +186,19 @@ function Open-Settings {
 New-Alias -Name os -Value Open-Settings
 ```
 
-### Reference
-
-[Windows 终端安装 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/install) 
-
-[使用 winget 工具安装和管理应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/) 
-
-[环境配置指南前置 – Windows 终端 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678607774)
-
 ## Pacakge Manager (Scoop)
 
-```shell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
-
-```shell
-proxy
-```
-
-```shell
-irm https://get.scoop.sh -outfile 'install.ps1'
-```
-
-```shell
-.\install.ps1 -ScoopDir 'C:\Users\jiaao\ProgramInstall\Tools\Scoop\install\'
-```
-
-```shell
-rm .\install.ps1
-```
-
-### Reference
+### Resources
 
 [环境配置指南前置 – Scoop 安装配置教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678611327) 
 
-## Tmux-Like Winodws Terminal
+## Winodws Terminal
+
+### Installation
 
 先安装 [JetBrainsMono](https://www.jetbrains.com/lp/mono/) 字体
+
+### Tmux-Like
 
 然后配置 [Windows 终端操作 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/customize-settings/actions)
 
@@ -643,7 +631,7 @@ rm .\install.ps1
 }
 ```
 
-## Get start with WSL
+## WSL
 
 ### 启用功能
 
@@ -685,6 +673,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 - 从[https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://links.jianshu.com/go?to=https%3A%2F%2Fwslstorestorage.blob.core.windows.net%2Fwslblob%2Fwsl_update_x64.msi)获取WSL2 Linux内核更新包并运行
 - 运行powershell
    - 查看目前的WSL版本
+
 ```shell
 wsl -l -v
 #输出
@@ -693,6 +682,7 @@ Ubuntu-20.04      Stopped          1
 ```
 
 - 执行更新
+
 ```shell
 wsl --set-version Ubuntu-18.04  2
 #输出
@@ -702,6 +692,7 @@ wsl --set-version Ubuntu-18.04  2
 ```
 
 - 完成后重新检测
+
 ```bash
 wsl -l -v
 #输出

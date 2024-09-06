@@ -9,6 +9,6 @@ hero:
     alt: whicha
 ---
 
-## About me
+## About this catalog
 
-A man who can't do magic.
+for Quick Reference

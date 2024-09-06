@@ -64,8 +64,23 @@ Create a new image from a container's changes.
 
 ### ARG
 
-set DEBIAN=noninteractive is very useful, and don't work in final image.
+[ARG](https://docs.docker.com/reference/dockerfile/#arg)
+
+> using ARG, which is not persisted in the final image
+
+Use Cases:
+
+```Dockerfile
+ARG DEBIAN_FRONTEND=noninteractive
+```
 
 ### ENV
 
+[ENV](https://docs.docker.com/reference/dockerfile/#env)
+
+> The environment variables set using ENV will persist when a container is run from the resulting image. 
 without env, I should source .zshrc/.bashrc/.profile etc in every layer including container start
+
+Use Cases:
+
+- [How do I integrate pyenv, poetry, and docker?](https://stackoverflow.com/questions/65768775/how-do-i-integrate-pyenv-poetry-and-docker)

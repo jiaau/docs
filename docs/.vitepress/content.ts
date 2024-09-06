@@ -29,33 +29,10 @@ export const content: contentObject = {
         text: 'Writer',
         collapsed: false,
       },
-    ],
-  },
-  ['Deep Learning']: {
-    sidebar: [
       {
-        text: '【李宏毅】Machine Learning 2022 Spring',
-        specifiedDir: 'lhy',
+        text: 'Tools',
         collapsed: false,
       },
     ],
   },
-  ['Programming Languages']: {
-    sidebar: [
-      {
-        text: 'C++',
-        specifiedDir: 'cpp',
-        collapsed: false,
-      },
-      {
-        text: 'Python',
-        collapsed: false,
-      },
-      {
-        text: 'TypeScript && JavaScript',
-        specifiedDir: 'ts-js',
-        collapsed: false,
-      },
-    ],
-  }
 }
