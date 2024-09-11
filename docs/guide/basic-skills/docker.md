@@ -1,35 +1,36 @@
 # Docker
 
-## Install Docker Desktop
+## Two ways to install Docker
+
+### Install Docker Engine (Recommended)
+
+跟随 [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) 进行安装。
+
+### Install Docker Desktop (Optional)
 
 [https://docs.docker.com/desktop/install/linux-install/](https://docs.docker.com/desktop/install/linux-install/)
 
-[https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop](https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop)
+General system requirements:
 
-1. Set up Docker's package repository. See step one of [Install using theaptrepository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
+- 你可以从 [Download QEMU](https://www.qemu.org/download/#linux) 安装 QEMU
+
+然后使用 
 
 ```shell
-# Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-# sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc // [!code --]
-sudo curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-Add the repository to Apt sources:
-# echo \ // [!code --]
-#   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \ // [!code --]
-#   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \ // [!code --]
-#   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null // [!code --]
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
+qemu-system-x86_64 --version
 ```
 
-**bugfix**
+查看其版本。
+
+- 设置 [KVM virtualization support](https://docs.docker.com/desktop/install/linux-install/#kvm-virtualization-support)
+
+接下来就可以进入安装步骤：
+
+[https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop](https://docs.docker.com/desktop/install/ubuntu/#install-docker-desktop)
+
+1. Set up Docker's package repository. See **step one** of [Install using theaptrepository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
+
+可能遇到的问题与解决方案：
 
 [Docker安装遇到问题：curl: (7) Failed to connect to download.docker.com port 443: 拒绝连接-CSDN博客](https://blog.csdn.net/Fengdf666/article/details/140221138)
 
@@ -42,7 +43,7 @@ sudo apt-get update
 sudo apt-get install ./docker-desktop-<arch>.deb
 ```
 
-### Proxy Config
+## Proxy Config
 
 代理软件打开全局模式
 
@@ -51,6 +52,18 @@ sudo apt-get install ./docker-desktop-<arch>.deb
 在 Docker Desktop 中设置代理软件端口
 
 ![docker-proxy.png](./docker/docker-proxy.png)
+
+> [!IMPORTANT]
+> 
+> 注意连个地址都是 `http`
+
+## Sign in to Docker Desktop (Optional)
+
+> [!NOTE]
+> 
+> 中国大陆用户需要进行代理设置后才能进行登陆操作。
+
+相关设置参考： [Signing in with Docker Desktop for Linux](https://docs.docker.com/desktop/get-started/#signing-in-with-docker-desktop-for-linux)
 
 ## Docker Container
 

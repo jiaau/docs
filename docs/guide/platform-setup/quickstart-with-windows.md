@@ -4,6 +4,10 @@
 
 [通过微软MediaCreationTool制作Win10系统安装U盘，安装纯净版Win10的通用教程-联想知识库 (lenovo.com.cn)](https://iknow.lenovo.com.cn/detail/177365.html) 
 
+> [!TIP]
+> 
+> 后续使用系统时推荐将软件安装在非用户文件夹下的其他位置，方便后续进行数据迁移。
+
 ## Useful Settings
 
 ### Close Windows Defender
@@ -26,32 +30,48 @@ DisableSearchBoxSuggestions
 
 DWORD 类型，值1
 
+## Scoop Installation
+
+[环境配置指南前置 – Scoop 安装配置教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678611327) 
+
+### Git Installation
+
+```shell
+scoop install git
+```
+
+> [!NOTE]
+>
+> 添加 Bucket 操作需要使用 Git。
+
+### Wezterm Installation
+
+[使用 Scoop 安装 Wezterm](https://wezfurlong.org/wezterm/install/windows.html#for-chocolatey-users)
+
+### VSCode Installation
+
+```shell
+scoop bucket add extras
+scoop install vscode
+```
+
+> [!NOTE]
+> 
+> extras 是 Scoop 官方维护的另一个 Bucket，包含了比 main 更多的软件包。所以这个 Bucket 里的包也是比较新的。
+> 
+> 你可以根据安装完成后的提示信息将 code 添加到资源管理器上下文
+
 ## Useful Tools
 
-### 7-Zip
-
-[7-Zip](https://7-zip.org/)
-
-### VPN
-
-[Releases · 2dust/v2rayN (github.com)](https://github.com/2dust/v2rayN/releases?ref=vps-rank)
-
-
-## PowerShell
-
-### Installation
-
-[Windows 终端安装 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/install) 
+### winget
 
 [使用 winget 工具安装和管理应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/) 
 
-### Resources
+### Windows Terminal (Optional)
 
-[环境配置指南前置 – Windows 终端 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678607774)
+[Windows 终端安装 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/install) 
 
-[PowerShell 脚本备份](https://github.com/whicha/config/blob/main/windows/Microsoft.PowerShell_profile.ps1)
-
-### Windows Terminal but Tmux-Like
+#### Windows Terminal but Tmux-Like
 
 Prerequisites:
 
@@ -61,11 +81,45 @@ Prerequisites:
 
 你可以参考 [我的配置](https://github.com/whicha/config/blob/main/windows/Windows-Terminal.settings.json)
 
-## Pacakge Manager (Scoop)
+### 7-Zip
 
-### Resources
+[7-Zip](https://7-zip.org/)
 
-[环境配置指南前置 – Scoop 安装配置教程 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678611327) 
+### VPN
+
+[Releases · 2dust/v2rayN (github.com)](https://github.com/2dust/v2rayN/releases?ref=vps-rank)
+
+### PowerShell
+
+参考 [环境配置指南前置 – Windows 终端 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/678607774) 配置如下内容：
+
+除 Windows Terminal 的内容都建议进行配置。
+
+- 使用，升级以及配置 Powershell
+
+- 配置终端代理
+
+- 工具函数
+
+- Starship 美化
+
+- 安装 [fzf](https://github.com/junegunn/fzf) 和 [PSFzf](https://github.com/kelleyma49/PSFzf)
+
+   - 反向搜索
+
+   - Tab 补全
+
+   - 目录搜索
+
+- 其他命令行工具
+
+   - [zoxide](https://github.com/ajeetdsouza/zoxide)
+
+   - [bat](https://github.com/sharkdp/bat)
+
+   - vim
+
+[PowerShell 脚本备份](https://github.com/whicha/config/blob/main/windows/Microsoft.PowerShell_profile.ps1)
 
 ## WSL
 
@@ -98,6 +152,7 @@ wsl --unregister Ubuntu-22.04
 #### 首先需要启用组件
 
 - 使用管理员打开Powershell并运行
+
 ```shell
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
