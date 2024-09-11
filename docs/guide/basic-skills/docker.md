@@ -55,7 +55,7 @@ sudo apt-get install ./docker-desktop-<arch>.deb
 
 > [!IMPORTANT]
 > 
-> 注意连个地址都是 `http`
+> 注意两个地址都是 `http`
 
 ## Sign in to Docker Desktop (Optional)
 
