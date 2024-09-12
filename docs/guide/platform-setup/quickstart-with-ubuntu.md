@@ -393,6 +393,14 @@ sudo systemctl start frps.service
 sudo systemctl status frps.service
 ```
 
+> [!NOTE]
+> 
+> 上述脚本假设你的系统安装了 `killall` 程序，如果没有可以使用如下命令进行安装：
+>
+> ```sh
+> sudo apt-get install  psmisc
+> ```
+
 #### 主机端
 
 ##### 下载
@@ -563,7 +571,9 @@ ssh my_host
 
 打开后，右键左侧边栏的 `任务计划程序库`，选择创建任务，对每个选项卡依次按需配置。
 
-- 在触发器一栏选择触发事件。
+- 在常规一栏设置名称即可。
+
+- 触发器一栏设置登录时（当任何用户登录时），防止电脑名更改需要手动启动，启动时。
 
 - 在操作一栏，点击 `新建`，操作为 `启动程序`，点击 `浏览`，找到 `frpc.exe` ，添加参数 `-c C:\Softwares\Tools\frp\frpc.ini`。
 

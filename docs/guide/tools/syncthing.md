@@ -116,3 +116,55 @@ syncthing
 
 后续配置同上。
 
+## Start Syncthing on Startup
+
+### Linux
+
+```sh
+vim /etc/systemd/system/syncthing.service
+```
+
+输入以下内容：
+
+```txt
+[Unit]
+Description=Syncthing - Open Source Continuous File Synchronization
+After=syslog.target network.target
+Wants=network.target
+
+[Service]
+User=root
+ExecStart=/usr/bin/syncthing -no-browser -no-restart -logflags=0
+ExecStop=/usr/bin/killall syncthing
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+启用脚本：
+
+```sh
+sudo systemctl enable syncthing.service
+sudo systemctl start syncthing.service
+```
+
+查看运行状态：
+
+```sh
+sudo systemctl status syncthing.service
+```
+
+### Windows
+
+按 Windows 键，键入 `任务计划程序`。
+
+打开后，右键左侧边栏的 `任务计划程序库`，选择创建任务，对每个选项卡依次按需配置。
+
+- 在常规一栏设置名称即可。
+
+- 触发器一栏设置登录时（当任何用户登录时），防止电脑名更改需要手动启动，启动时。
+
+- 在操作一栏，点击 `新建`，操作为 `启动程序`，点击 `浏览`，找到 `C:\Users\<user>\/.local\bin\syncthing.exe` ，添加参数 `-no-browser -no-restart -logflags=0`。
+
+- 建议在条件一栏只勾选 `网络`。
