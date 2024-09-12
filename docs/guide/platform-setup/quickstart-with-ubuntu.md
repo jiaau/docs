@@ -2,11 +2,199 @@
 
 ## Computer Assembly
 
+### 配件
+
+**主机配件：**
+
+- 显卡：iGame GeForce RTX 4070 Ti SUPER Advanced OC 16G
+
+  - 6689 RMB 
+
+- CPU：i7 12700KF
+
+- 主板：MSI MAG B760M MORTAR WIFI II DDR5
+
+  - 板U合计 2499 RMB 
+
+- 内存：宏碁 凌霜 16G*2 6400 银色 C32
+
+  - 754.8 RMB 
+
+  - 海力士 A-Die 颗粒
+
+  - 带内存马甲
+
+- 固态硬盘：至态 TiPlus 7100 1TB (4.0)
+
+  - 519 RMB
+
+- 电源：利民 TG 750-W 白色金牌全模组电源
+
+  - 388.1 RMB
+
+- 散热：利民 PA120 白色
+
+  - 203.8 RMB 
+
+- 机箱：乔思伯 D31 白色 MESH 网孔版
+
+  - 269.8 RMB
+
+- 机箱风扇：
+
+  - 底部风扇：
+
+    - 利民 TL-C14CW 白色无光风扇 * 2
+
+  - 顶部风扇：
+
+    - 利民 TL-C14CW 白色无光风扇 * 2
+
+  - 前置风扇：
+
+    - 利民 TL-C12CW 白色单包 * 1
+
+  - 底部 + 顶部 = 84.55 RMB
+
+  - 前置 = 19.8 RMB
+
+- 主机配件合计：11427.85 RMB
+
+**其他配件：**
+
+- 拆快递工具刀：
+
+  - 6 RMB
+
+- 大十字螺丝刀：deli 防滑握大号
+
+  - 21.96 RMB
+
+- 小十字螺丝刀：
+
+  - 1 RMB
+
+- 显示器：雷神 黑武士 24.5 2K 170HZ
+
+  - 798.11 RMB
+
+- 鼠标：罗技 G102
+
+  - 93.46 RMB
+
+- 网线：山泽 六类千兆-扁线纯铜 1m
+
+  - 4.45 RMB
+
+- 酷毙灯：公牛 8瓦 4000K 普通开关 线长 1.5m
+
+  - 16.21 RMB
+
+- 插头：绿联 5V1A 充电头
+
+  - 15.19 RMB
+
+- 插座：公牛 8位总控 1.8米
+
+  - 32.67 RMB
+
+- 其他配件合计：989.05 RMB
+
+**装机合计：** 12416.9 RMB
+
+### 组装
+
+[【装机教程】全网最好的装机教程，没有之一](https://www.bilibili.com/video/BV1BG4y137mG)
+
+排错：
+
+- 如果按照教程上电之后，风扇灯光均没有启动，很可能是连接开机键的线没有接对。
+
+- 显卡插上主板后，要记得插上供电，否则显示屏无信号接入。
+
+- 根据主板指示灯进行排错，如果是内存问题，应当仔细观看装机视频的该过程的细节，主板存在差异，笔者购买的主板只有单面卡扣。
+
+- 如果 CPU，内存和显卡没有问题，则能成功点亮。
+
+- 进入到 BIOS 界面如果查看不到固态硬盘信息，应当仔细观看 M2 固态硬盘的安装方法。
+
+拆卸：
+
+- 显卡和内存应该先拨开底座卡扣再进行拔取，避免损坏底座。
+
+建议：
+
+- 如果是初次组装，可提前观看上述装机视频，了解应当准备哪些部件（主板，CPU etc.），哪些工具（螺丝刀）。
+
+- 推荐观看 [【硬核科普】从零开始认识主板](https://www.bilibili.com/video/BV1xQ4y1b7JS) 以避免一些低级错误，如主板是 DDR4，但买的内存是 DDR5 的。
+
+- 在你准备购买机箱前，应询问机箱客服你的主机配件是否能装进去。
+
+- 机箱风扇与散热风扇风的走向是相反的，拿不准时应当询问风扇客服，是否接反了，推荐 [硬核科普】机箱风扇怎么安装，如何科学的布置机箱风道？](https://www.bilibili.com/video/BV1Mi4y1M7Mz)。
+
+- 拍照留存打开包装时的样子，包装盒不要丢弃，方便后续装盒运输。
+
+- 带有 WIFI 的主板记得安装天线。
+
 ## Operating System Installation
 
 [Windows11 + Linux (Ubuntu22.04) 双系统最简安装详细避坑版_win11安装linux双系统-CSDN博客](https://blog.csdn.net/2401_84064328/article/details/137232169)
 
-官方镜像下载： [Ubuntu 22.04.4 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/)
+### 制作 Ubuntu 安装 U盘
+
+下载官方镜像： [Ubuntu 22.04.4 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/)
+
+下载 [Ventoy](https://gitee.com/longpanda/Ventoy/releases/) 
+
+下载后打开，在 `设备` 选择 U盘，`配置选项` 下的 `分区类型` 选择 `GPT`。
+
+点击 `安装` 即可。
+
+最后将下载好的官方镜像拖入 U盘，启动盘便制作完成了。
+
+### 设置 BIOS
+
+主板插上 U盘，接上键盘，启动电源，按 `F11` 进入到 BIOS 界面。
+
+将 `BIOS Mode` 由 `UEFI` 更改为 `CSM`。（默认是 `UEFI`）。
+
+设置 U盘优先级。
+
+正确保存设置后，退出将进入系统引导界面。
+
+### 系统安装
+
+> [!IMPORTANT]
+> 
+> 如果硬盘没有正确安装，在硬盘分区时会看不到和硬盘大小接近的区域的，所以需要正确安装硬盘。
+
+分区设置：
+
+- 从硬盘新建一个类型为 `efi` 的分区，用于存放系统引导文件，然后在当前页面最后一栏选择其作为安装引导器的设备。
+
+笔者给的大小是 512 MB，通过 
+
+```sh
+df -h
+```
+查看后，信息如下：
+
+```txt
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p1  487M  6.1M  480M   2% /boot/efi
+```
+
+所以说，应该是不需要这么大的。
+
+- 继续从空闲磁盘区域新建类型为 `ext4` 的分区用于挂载文件系统。
+
+笔者将除去 `efi` 分区的剩余空间全部用于挂载 `/` 文件系统了。
+
+> [!NOTE]
+> 
+> 你可以新建多个分区，然后将文件系统的不同部分挂载到对应的分区之上，便于后续数据迁移和系统重装。
+> 
+> 分区类型还有其他类型，如 `swap` 类型，作为内存交换分区，如有需要可自行探索。
 
 ## Base Configuration
 
@@ -383,7 +571,7 @@ nvidia-smi
 
 ### NVIDIA Container Toolkit
 
-首先需要安装 Docker，可参照 todo 进行。
+首先需要安装 Docker，可参照 [docker](../basic-skills/docker.md) 进行。
 
 参照 [Installing the NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) 进行安装配置。
 
@@ -402,7 +590,7 @@ nvidia-smi
 镜像区别可在页面的 `Overview of Images` 处找到。
 
 > Three flavors of images are provided:
-
+> 
 > - base: Includes the CUDA runtime (cudart)
 > 
 > - runtime: Builds on the base and includes the CUDA math libraries⁠, and NCCL⁠. A runtime image that also includes cuDNN⁠ is available.
@@ -414,15 +602,25 @@ nvidia-smi
 ```shell
 sudo docker run -it --name test_nvidia_docker --gpus all nvidia/cuda:11.1-base 
 ```
-可能遇到的问题与解决方案：
+
+:::details 可能遇到的问题与解决方案：
 
 - [Failed to initialize NVML](https://stackoverflow.com/a/78137688)
+
+:::
 
 进入镜像后可使用如下命令，检查 CUDA 版本：
 
 ```shell
 nvcc -V
 ```
+你还可以通过：
+
+```sh
+cat /etc/os-release
+```
+
+查看镜像的 Ubuntu 版本。
 
 ## Tips & Tricks
 

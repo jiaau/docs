@@ -30,9 +30,11 @@ qemu-system-x86_64 --version
 
 1. Set up Docker's package repository. See **step one** of [Install using theaptrepository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
 
-可能遇到的问题与解决方案：
+:::details 可能遇到的问题与解决方案：
 
-[Docker安装遇到问题：curl: (7) Failed to connect to download.docker.com port 443: 拒绝连接-CSDN博客](https://blog.csdn.net/Fengdf666/article/details/140221138)
+- [Docker安装遇到问题：curl: (7) Failed to connect to download.docker.com port 443: 拒绝连接-CSDN博客](https://blog.csdn.net/Fengdf666/article/details/140221138)
+
+:::
 
 2. Download [latest DEB package](https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64&_gl=1*1bdcvx9*_gcl_aw*R0NMLjE3MjI2NTQzODYuRUFJYUlRb2JDaE1JM2NLTDB1dlhod01WM2x3UEFoMTlhQUNLRUFBWUFTQUFFZ0kxQWZEX0J3RQ..*_gcl_au*MTA5NDI0NzA4NC4xNzIyNjA0OTYx*_ga*OTY4MDY2MzUzLjE3MjI2MDQ5NjE.*_ga_XJWPQMJYHQ*MTcyMjY2Njc4OC40LjEuMTcyMjY2ODk2MS41OS4wLjA.).
 

@@ -61,14 +61,14 @@ ssh-keygen
 > [!IMPORTANT]
 > 
 > 如果你使用 -f 修改了默认文件位置以及名称，你需要对 `~/.ssh/config` 的文件内容进行如下修改：
-
-```txt
-Host server
-  HostName 127.0.0.1
-  Port 22
-  User root
-  IdentityFile <path>\id_rsa_custom
-```
+> 
+> ```txt
+> Host server
+>   HostName 127.0.0.1
+>   Port 22
+>   User root
+>   IdentityFile <path>\id_rsa_custom
+> ```
 
 再次使用
 
@@ -80,4 +80,4 @@ ssh server
 
 > [!NOTE]
 > 
-> 如果你想知道为什么要进行如上操作，[什么是SSH？SSH是如何工作的？](https://info.support.huawei.com/info-finder/encyclopedia/zh/SSH.html) 也许会解答你的疑问。
+> 如果你想知道配置这些步骤的原因，[什么是SSH？SSH是如何工作的？](https://info.support.huawei.com/info-finder/encyclopedia/zh/SSH.html) 也许会解答你的疑问。
