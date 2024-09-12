@@ -16,11 +16,11 @@ sudo rm -rf ./Zotero_linux-x86_64
 
 ```sh
 cd /opt/zotero
-./set_launcher_icon
+sudo ./set_launcher_icon
 ```
 
 ```sh
-ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
+sudo ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
 ```
 
 ## Configuration
