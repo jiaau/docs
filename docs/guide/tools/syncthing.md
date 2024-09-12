@@ -91,3 +91,28 @@ syncthing
 TODO: 
 - 补充图片
 
+
+## Run Syncthing on Windows
+
+选择命令行版本下的跨平台版本进行安装：[Cross-platform](https://docs.syncthing.net/users/contrib.html#id1)
+
+由于 Windows 下使用的时最新的 Powershell，需要对安装指令进行修改：
+
+```sh
+curl.exe -A MS https://webinstall.dev/syncthing | pwsh
+```
+
+安装完毕后重新打开 Powershell，就可以启动 `syncthing` 了：
+
+```sh
+syncthing
+```
+
+> [!IMPORTANT]
+> 
+> 默认端口被占用时，会启动失败。这通常发生在你先使用 VSCode 连接并启动远程服务器的 Syncthing 时，其占用了本地相同端口，从而导致启动失败。
+> 
+> 你应当先启动本地 Syncthing，然后再使用 VSCode 启动远程 Syncthing。因为当 VSCode 检测到端口被占用时，会将其转发到未被占用的端口。
+
+后续配置同上。
+
