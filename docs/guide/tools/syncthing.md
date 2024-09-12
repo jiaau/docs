@@ -118,6 +118,10 @@ syncthing
 
 ## Start Syncthing on Startup
 
+> [!IMPORTANT]
+> 
+> 具体路径可能存在差异，注意使用 `which syncthing` 查看路径是否与下面服务文件中的路径一致，不一致则需要修改。
+
 ### Linux
 
 ```sh
