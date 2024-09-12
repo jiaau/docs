@@ -200,6 +200,8 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 ### Base Configuration 1
 
+[wezterm](https://wezfurlong.org/wezterm/install/linux.html#using-the-apt-repo) 终端安装
+
 [环境配置指南 – Ubuntu 20.04 杂项（服务器）](https://zhuanlan.zhihu.com/p/700219388)
 
 - 使用 [pyenv](https://github.com/pyenv/pyenv) 安装和管理 python 版本

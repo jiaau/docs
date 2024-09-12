@@ -119,6 +119,21 @@ Prerequisites:
 
    - vim
 
+更改 wezterm 默认使用的 shell：
+
+[Changing the default program](https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program)
+
+```lua
+-- Pull in the wezterm API
+local wezterm = require("wezterm")
+
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+-- Spawn powershell in login mode
+config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe'}
+```
+
 [PowerShell 脚本备份](https://github.com/whicha/config/blob/main/windows/Microsoft.PowerShell_profile.ps1)
 
 ## WSL
