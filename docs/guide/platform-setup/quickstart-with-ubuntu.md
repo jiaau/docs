@@ -216,6 +216,39 @@ Filesystem      Size  Used Avail Use% Mounted on
 
   - [rigrep](https://github.com/BurntSushi/ripgrep)
 
+#### Proxy
+
+将下面的脚本添加到 `.zshrc` 或其他 shell 配置文件中。
+
+```shell
+# >>> proxy >>>
+proxy() {
+  proxy_host='127.0.0.1'
+  proxy_port=7890
+  http_proxy_url="http://$proxy_host:$proxy_port"
+  socks5_proxy_url="socks5://$proxy_host:$proxy_port"
+
+  export http_proxy=$http_proxy_url
+  export HTTP_PROXY=$http_proxy_url
+  export https_proxy=$http_proxy_url
+  export HTTPS_PROXY=$http_proxy_url
+  export all_proxy=$socks5_proxy_url
+  export ALL_PROXY=$socks5_proxy_url
+}
+
+unproxy() {
+  unset http_proxy
+  unset HTTP_PROXY
+  unset https_proxy
+  unset HTTPS_PROXY
+  unset all_proxy
+  unset ALL_PROXY
+}
+# <<< proxy <<<
+```
+
+当你 `curl` 不下来时，可以尝试 `proxy` 
+
 ### Base Configuration 2
 
 [环境配置指南 – Ubuntu 22.04 杂项](https://zhuanlan.zhihu.com/p/686485113)
