@@ -14,6 +14,10 @@
 
 [Defender Control v2.1 (sordum.org)](https://www.sordum.org/9480/defender-control-v2-1/)
 
+> [!NOTE]
+> 
+> 解压之后可能存在看不见 `dControl.exe` 的情况，这时候应当先点击 `Defender_Settings.vbs` 关闭实时保护，再次进行解压缩。
+
 ### 清理搜索
 
 [更新能永久暂停？盘点两个奇特的Windows使用技巧_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1FM4y1i76d/?spm_id_from=333.999.0.0&vd_source=28c1733f23da877f7a7ff03ab05b2a54) 
