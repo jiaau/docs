@@ -13,32 +13,27 @@ Prerequisites:
 
 - 主机间能够进行通信（在同一局域网内/至少有 一台主机具有公网 ip）。
 
-本文的场景为一台阿里云服务器 + 一台本地主机，系统均为 Debian 系。系统可能和你的存在差异，你可以在 [这里](https://docs.syncthing.net/intro/getting-started.html) 参考官方的教程。
+本文的场景为一台阿里云服务器 + 一台本地主机，系统均为 Debian 系，外加一台 Windows10 电脑。系统可能和你的存在差异，你可以在 [这里](https://docs.syncthing.net/intro/getting-started.html) 参考官方的教程。
 
 ### Installation
 
 你可以在 [Community Contributions](https://docs.syncthing.net/users/contrib.html#contributions) 根据你的平台选择合适的安装方式。
 
 下面提供了两种安装方式：
-- 使用 Docker 安装
-- 直接安装在本机
+
+- 使用 [Docker](https://github.com/syncthing/syncthing/blob/main/README-Docker.md#docker-container-for-syncthing) 安装
+
+- 以 [Packages and Bundlings](https://docs.syncthing.net/users/contrib.html#packages-and-bundlings) 方式安装。
 
 #### Run Syncthing in Docker
 
-根据 [Example Usage](https://github.com/syncthing/syncthing/blob/main/README-Docker.md#example-usage) 文档进行配置。
-
-> Note that Docker's default network mode prevents local IP addresses from being discovered, as Syncthing is only able to see the internal IP of the container on the 172.17.0.0/16 subnet. This will result in poor transfer rates if local device addresses are not manually configured.
-
-> [!NOTE]
-> 笔者使用官方给出在 [host network mode](https://docs.docker.com/network/host/) 下的 [配置](https://github.com/syncthing/syncthing/blob/main/README-Docker.md#discovery) 时，无法访问 admin GUI 网址，从而无法使用。
+根据 [Example Usage](https://github.com/syncthing/syncthing/blob/main/README-Docker.md#discovery) 文档进行配置。
 
 建议使用 `docker-compose.yml` 文件，方便修改配置，复制对应配置内容，然后输入以下命令启动容器。
 
 ```shell
-docker compse up
+docker compse up -d
 ```
-> [!NOTE]
-> 这种安装方式使用 [Mount volume](https://docs.docker.com/reference/cli/docker/container/run/#volume) mounts host directory into container directory，普通用户只能进行读，写操作需要使用 `sudo` 命令。
 
 #### Debian/Ubuntu Packages
 
@@ -49,6 +44,32 @@ docker compse up
 ```shell
 syncthing
 ```
+
+> [!NOTE]
+> 
+> 也可以参照 [Cross-platform](https://docs.syncthing.net/users/contrib.html#id1) 安装跨平台版本。
+
+#### Run Syncthing on Windows
+
+选择跨平台版本进行安装：[Cross-platform](https://docs.syncthing.net/users/contrib.html#id1)
+
+由于 Windows 下使用的时最新的 Powershell，需要对安装指令进行修改：
+
+```sh
+curl.exe -A MS https://webinstall.dev/syncthing | pwsh
+```
+
+安装完毕后重新打开 Powershell，就可以启动 `syncthing` 了：
+
+```sh
+syncthing
+```
+
+> [!IMPORTANT]
+> 
+> 默认端口被占用时，会启动失败。这通常发生在你先使用 VSCode 连接并启动远程服务器的 Syncthing 时，其占用了本地相同端口，从而导致启动失败。
+> 
+> 你应当先启动本地 Syncthing，然后再使用 VSCode 启动远程 Syncthing。因为当 VSCode 检测到端口被占用时，会将其转发到未被占用的端口。
 
 ### Config
 
@@ -86,43 +107,22 @@ syncthing
 步骤与实时同步文件夹基本相同，只是文件夹类型有差异：
 
 - 本地文件夹类型设置为`仅发送`
+
 - 云服务器文件夹类型设置为`仅接收`
 
 TODO: 
+
 - 补充图片
 
-
-## Run Syncthing on Windows
-
-选择命令行版本下的跨平台版本进行安装：[Cross-platform](https://docs.syncthing.net/users/contrib.html#id1)
-
-由于 Windows 下使用的时最新的 Powershell，需要对安装指令进行修改：
-
-```sh
-curl.exe -A MS https://webinstall.dev/syncthing | pwsh
-```
-
-安装完毕后重新打开 Powershell，就可以启动 `syncthing` 了：
-
-```sh
-syncthing
-```
-
-> [!IMPORTANT]
-> 
-> 默认端口被占用时，会启动失败。这通常发生在你先使用 VSCode 连接并启动远程服务器的 Syncthing 时，其占用了本地相同端口，从而导致启动失败。
-> 
-> 你应当先启动本地 Syncthing，然后再使用 VSCode 启动远程 Syncthing。因为当 VSCode 检测到端口被占用时，会将其转发到未被占用的端口。
-
-后续配置同上。
-
-## Start Syncthing on Startup
+### Start Syncthing on Startup
 
 > [!IMPORTANT]
 > 
 > 具体路径可能存在差异，注意使用 `which syncthing` 查看路径是否与下面服务文件中的路径一致，不一致则需要修改。
 
-### Linux
+#### Linux
+
+如果你使用的是 Docker 安装方式则一直保持容器处于运行状态即可，如果采用上述提到的非 Docker 安装方式则可参照下列教程进行配置。
 
 ```sh
 vim /etc/systemd/system/syncthing.service
@@ -159,7 +159,7 @@ sudo systemctl start syncthing.service
 sudo systemctl status syncthing.service
 ```
 
-### Windows
+#### Windows
 
 按 Windows 键，键入 `任务计划程序`。
 
