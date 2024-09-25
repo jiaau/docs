@@ -36,9 +36,9 @@
 
 [docker保存、导入、导出和加载tar及其tar.gz](https://blog.csdn.net/qq_31066285/article/details/126267993)
 
-> [!NOTE]
+> [!WARNING]
 > 
->  [My Workflow](https://github.com/whicha/images) 中通过 Github Releases 发布的 docker tar 包没有元信息，只有通过手动 tag 进行使用：`docker import xxx.tar test:test`
+>  不同分支下 workflow 名称相同（非 yml 文件名称相同）时，即使触发事件发生，workflow 可能也不会启动。
 
 ## Github Pages
 

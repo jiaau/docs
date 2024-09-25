@@ -202,7 +202,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 
 [wezterm](https://wezfurlong.org/wezterm/install/linux.html#using-the-apt-repo) 终端安装
 
-### Commandline Tools
+#### Commandline Tools
 
 [环境配置指南 – Ubuntu 20.04 杂项（服务器）](https://zhuanlan.zhihu.com/p/700219388)
 
@@ -272,6 +272,10 @@ unproxy() {
 > [!NOTE]
 > 
 > Pano 需要按照其 [Github Repository](https://github.com/oae/gnome-shell-pano?tab=readme-ov-file#installation) 进行安装
+
+### Appendices
+
+[我的镜像构建仓库](https://github.com/whicha/images) 中记录了上述部分软件的安装指令，可以通过 [Dockerfile](https://github.com/whicha/images/blob/base/Dockerfile) 进行查看。
 
 ## Remote Configuration
 

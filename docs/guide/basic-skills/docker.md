@@ -419,3 +419,24 @@ Change: 2024-09-21 09:33:51.163958037 +0000
 [Bind mounts](https://docs.docker.com/engine/storage/bind-mounts/)
 
 [Mount volume (-v)](https://docs.docker.com/reference/cli/docker/container/run/#volume)
+
+
+### How do I Docker COPY as non root?
+
+[How do I Docker COPY as non root?](https://stackoverflow.com/a/44766666/26612416)
+
+```Dockerfile
+COPY --chown=<user>:<group> <hostPath> <containerPath>
+```
+
+`user` 和 `group` 可为 `uid` 和 `gid`，见：
+
+```Dockerfile
+COPY --chown=$USER_UID:$USER_GID . .
+```
+
+## Docker image
+
+### docker保存、导入、导出和加载tar及其tar.gz
+
+[docker保存、导入、导出和加载tar及其tar.gz](https://blog.csdn.net/qq_31066285/article/details/126267993)
