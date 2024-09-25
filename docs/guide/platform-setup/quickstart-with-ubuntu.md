@@ -584,6 +584,8 @@ ssh my_host
 
 ## Deep Learning Configuration
 
+以 [【保姆级教程】个人深度学习工作站配置指南](https://zhuanlan.zhihu.com/p/336429888) 为大纲，进行如下配置：
+
 以下配置优先参照官方文档进行安装。
 
 ### NVIDIA GPU driver

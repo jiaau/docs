@@ -48,7 +48,7 @@ scoop install git
 >
 > 添加 Bucket 操作需要使用 Git。
 
-### Wezterm Installation
+### WezTerm Installation
 
 [使用 Scoop 安装 Wezterm](https://wezfurlong.org/wezterm/install/windows.html#for-chocolatey-users)
 
@@ -83,7 +83,11 @@ Prerequisites:
 
 然后你就可以开始配置 [Windows 终端操作 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/terminal/customize-settings/actions)
 
-你可以参考 [我的配置](https://github.com/whicha/config/blob/main/windows/Windows-Terminal.settings.json)
+:::details 可供参考的配置
+
+<<< @/public/assets/code-snippets/windows-terminal.settings.json
+
+:::
 
 ### 7-Zip
 
@@ -123,11 +127,26 @@ Prerequisites:
 
    - vim
 
-更改 wezterm 默认使用的 shell：
+:::details 可供参考的配置
+
+<<< @/public/assets/code-snippets/Microsoft.PowerShell_profile.ps1
+
+:::
+
+### WezTerm Config
+
+:::details 可供参考的配置
+
+<<< @/public/assets/code-snippets/.wezterm.lua
+
+:::
+
+Windows 下更改 WezTerm 默认使用的 shell：
 
 [Changing the default program](https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program)
 
 ```lua
+
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -136,15 +155,14 @@ local config = wezterm.config_builder()
 
 -- Spawn powershell in login mode
 config.default_prog = { 'C:\\Program Files\\PowerShell\\7\\pwsh.exe'}
-```
 
-[PowerShell 脚本备份](https://github.com/whicha/config/blob/main/windows/Microsoft.PowerShell_profile.ps1)
+```
 
 ## WSL
 
 ### 启用功能
 
-![](https://obsidian-gallery-cd.oss-cn-chengdu.aliyuncs.com/obsidian-first/wsl.png#errorMessage=unknown%20error&id=ngpr7&originHeight=488&originWidth=482&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none) 
+![Windows 功能](https://obsidian-gallery-cd.oss-cn-chengdu.aliyuncs.com/obsidian-first/wsl.png#errorMessage=unknown%20error&id=ngpr7&originHeight=488&originWidth=482&originalType=binary&ratio=1&rotation=0&showTitle=false&status=error&style=none) 
 
 [安装 WSL | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/wsl/install) 
 
