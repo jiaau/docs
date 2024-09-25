@@ -40,6 +40,10 @@
 > 
 >  不同分支下 workflow 名称相同（非 yml 文件名称相同）时，即使触发事件发生，workflow 可能也不会启动。
 
+其他工作流参考：
+
+[快速构建指定架构/平台的docker镜像](https://github.com/wukongdaily/DockerTarBuilder/tree/master)
+
 ## Github Pages
 
 [Deploy Your VitePress Siteeploy Your VitePress Site](https://vitepress.dev/guide/deploy#github-pages)
