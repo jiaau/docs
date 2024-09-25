@@ -4,6 +4,10 @@
 
 [GitHub Actions 快速入门](https://docs.github.com/zh/actions/writing-workflows/quickstart)
 
+[About workflows](https://docs.github.com/en/actions/writing-workflows/about-workflows)
+
+> Workflows are defined in the .github/workflows directory in a repository. A repository can have multiple workflows, each which can perform a different set of tasks
+
 ## Events that trigger workflows 
 
 [Events that trigger workflows](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows)
