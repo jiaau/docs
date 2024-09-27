@@ -67,6 +67,10 @@ scoop install vscode
 
 ## Useful Tools
 
+### Uninstall Tools
+
+[Uninstall Tools](https://github.com/whicha/docs/releases/download/tools%2Funinstall/Uninstall.Tool3.5.10.5670.rar)
+
 ### winget
 
 [使用 winget 工具安装和管理应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/) 
