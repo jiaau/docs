@@ -142,3 +142,17 @@ unproxy
 > [!NOTE]
 > 
 > 这种使用方式下，不能代理浏览器请求。
+
+## Others
+
+### Youtube 字幕问题
+
+Youtube 字幕无法显示时，可以尝试更换节点。
+
+Youtube 双语字幕插件：[YouTube™ Dual Subtitles](https://chromewebstore.google.com/detail/youtube-dual-subtitles/hkbdddpiemdeibjoknnofflfgbgnebcm?hl=en-US)
+
+设置：
+
+- 设置部分选择 English 或 English(auto-generated)
+
+- 点击插件生成的字幕，第一个选项选择 Chinese 第二个选择 bilingual

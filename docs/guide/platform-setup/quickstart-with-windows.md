@@ -52,6 +52,11 @@ scoop install git
 
 [使用 Scoop 安装 Wezterm](https://wezfurlong.org/wezterm/install/windows.html#for-chocolatey-users)
 
+> [!NOTE]
+>  
+> if you want to add support for "open wezterm here" in windows explorer, install it by [setup.exe](https://github.com/wez/wezterm/releases/download/20240203-110809-5046fc22/WezTerm-20240203-110809-5046fc22-setup.exe) is the right way.
+> 
+
 ### VSCode Installation
 
 ```shell
