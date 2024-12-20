@@ -39,8 +39,9 @@ alias tmux="tmux -u"
 
 see [How do I make these links open in Neovim?](https://www.reddit.com/r/neovim/comments/xv0f4q/how_do_i_make_these_links_open_in_neovim/)
 
+[how to set tab spaces to 2](https://www.reddit.com/r/neovim/comments/vxqt95/how_to_set_tab_spaces_to_2/)
 
-## Waiting to be organized
+[tab space settings for markdown file](https://github.com/whicha/nvim/blob/1b31b447532c6412ce14b358f5032012c2f94ccd/init.lua#L48)
 
 ### Search by line number
 
