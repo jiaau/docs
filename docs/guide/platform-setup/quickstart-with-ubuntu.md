@@ -139,7 +139,7 @@ unproxy() {
 
 ### Appendices
 
-[我的镜像构建仓库](https://github.com/whicha/images) 中记录了上述部分软件的安装指令，可以通过 [Dockerfile](https://github.com/whicha/images/blob/base/Dockerfile) 进行查看。
+[我的镜像构建仓库](https://github.com/jiaau/images) 中记录了上述部分软件的安装指令，可以通过 [Dockerfile](https://github.com/jiaau/images/blob/base/Dockerfile) 进行查看。
 
 ## Remote Configuration
 

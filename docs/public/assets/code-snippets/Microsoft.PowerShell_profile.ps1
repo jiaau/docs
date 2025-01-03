@@ -117,7 +117,7 @@ function Open-TerminalAsAdmin {
 }
 New-Alias -Name elevate -Value Open-TerminalAsAdmin
 
-# whicha
+# ao jia
 
 # Open PROFILE. (Alias: op)
 function Open-Profile {

@@ -14,11 +14,11 @@
 
 ### Windows
 
-[下载链接](https://github.com/whicha/docs/releases/download/clash/Clash.for.Windows-0.20.39-win.7z)
+[下载链接](https://github.com/jiaau/docs/releases/download/clash/Clash.for.Windows-0.20.39-win.7z)
 
 ### Ubuntu
 
-[下载链接](https://github.com/whicha/docs/releases/download/clash/clash-verge_1.3.8_amd64.deb)
+[下载链接](https://github.com/jiaau/docs/releases/download/clash/clash-verge_1.3.8_amd64.deb)
 
 ## Command Line Tools
 
@@ -32,7 +32,7 @@
 
 ### Installation
 
-[下载链接](https://github.com/whicha/docs/releases/download/clash/clash-linux-amd64-v1.18.0.gz)
+[下载链接](https://github.com/jiaau/docs/releases/download/clash/clash-linux-amd64-v1.18.0.gz)
 
 [备用链接](https://github.com/opusb/clash/releases)
 

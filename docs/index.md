@@ -3,10 +3,10 @@
 layout: home
 
 hero:
-  name: "Whicha"
+  name: "Ao Jia"
   image:
-    src: /whicha.png
-    alt: whicha
+    src: /avatar.png
+    alt: avatar
 ---
 
 ## About this catalog

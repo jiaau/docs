@@ -22,7 +22,7 @@
 
 ### My Workflow
 
-[My Workflow](https://github.com/whicha/images)
+[My Workflow](https://github.com/jiaau/images)
 
 > [!WARNING]
 > 
@@ -60,7 +60,7 @@
 
 ### My Workflow
 
-[My Workflow](https://github.com/whicha/docs)
+[My Workflow](https://github.com/jiaau/docs)
 
 [Deploy Your VitePress Siteeploy Your VitePress Site](https://vitepress.dev/guide/deploy#github-pages)
 
@@ -68,6 +68,6 @@
 
 ### My Workflow
 
-[My Workflow](https://github.com/whicha/images)
+[My Workflow](https://github.com/jiaau/images)
 
 [A GitHub Action for creating GitHub Releases on Linux, Windows, and macOS virtual environments](https://github.com/softprops/action-gh-release)

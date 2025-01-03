@@ -12,7 +12,7 @@ const navList: string[] = Object.keys(content)
 */
 
 export default defineConfig({
-  title: 'whicha',
+  title: 'ao jia',
   base: '/docs/',
   description: 'A Docs Site',
   lang: 'zh-CN',
@@ -28,16 +28,16 @@ export default defineConfig({
       provider: 'local',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/whicha/docs' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/jiaau/docs' }],
 
     editLink: {
-      pattern: 'https://github.com/whicha/docs/edit/main/docs/:path',
+      pattern: 'https://github.com/jiaau/docs/edit/main/docs/:path',
       text: 'Edit this page on GitHub',
     },
 
     footer: {
       message: 'NO LICENSE HERE',
-      copyright: `Copyright © 2024-${new Date().getFullYear()} whicha`,
+      copyright: `Copyright © 2024-${new Date().getFullYear()} ao jia`,
     },
 
     docFooter: {

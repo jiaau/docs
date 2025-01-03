@@ -74,7 +74,7 @@ scoop install vscode
 
 ### Uninstall Tools
 
-[Uninstall Tools](https://github.com/whicha/docs/releases/download/tools%2Funinstall/Uninstall.Tool3.5.10.5670.rar)
+[Uninstall Tools](https://github.com/jiaau/docs/releases/download/tools%2Funinstall/Uninstall.Tool3.5.10.5670.rar)
 
 ### winget
 
